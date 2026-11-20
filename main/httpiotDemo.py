@@ -8,7 +8,7 @@ while True:
         r = requests.get(f"http://{ESP32_IP}/status", timeout=5)
         print(f"ESP32: {r.json()}")
         requests.post(f"http://{ESP32_IP}/led",
-              json={"command": "LED_OFF"})
+              json={"command": "LED_ON"})
     except Exception as e:
         print(f"Error: {e}")
     time.sleep(3)
